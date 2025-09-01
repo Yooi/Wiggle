@@ -20,7 +20,6 @@ Choose your preferred platform for one-click deployment:
 
 <div align="center">
   <img src="./screenshots/preview-1.png" alt="Landing Page" width="280"/>
-  <img src="./screenshots/preview-2.png" alt="Voice Chat Room" width="280"/>
   <img src="./screenshots/preview-3.png" alt="Voice Orb Animation" width="280"/>
 </div>
 
