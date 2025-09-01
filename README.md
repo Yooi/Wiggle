@@ -16,6 +16,14 @@ Choose your preferred platform for one-click deployment:
 
 📖 **Detailed Deployment Guide**: [DEPLOY.md](./DEPLOY.md)
 
+## 📸 Preview
+
+<div align="center">
+  <img src="./screenshots/preview-1.png" alt="Landing Page" width="280"/>
+  <img src="./screenshots/preview-2.png" alt="Voice Chat Room" width="280"/>
+  <img src="./screenshots/preview-3.png" alt="Voice Orb Animation" width="280"/>
+</div>
+
 ## Overview
 
 Wiggle is a modern decentralized voice chat application built with React + TypeScript, featuring a beautiful ChatGPT-style interface with an innovative liquid voice orb visualization. The goal is to enable peer-to-peer voice communication without relying on centralized servers.

@@ -66,3 +66,5 @@ tmp/
 
 DEVLOG.md 
 prd.md 
+
+package-lock.json
