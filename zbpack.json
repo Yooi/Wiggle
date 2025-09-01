@@ -1,0 +1,10 @@
+{
+  "name": "wiggle",
+  "build": {
+    "buildCommand": "npm run build",
+    "outputDirectory": "dist",
+    "installCommand": "npm install"
+  },
+  "static": true,
+  "spa": true
+}

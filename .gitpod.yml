@@ -1,0 +1,33 @@
+tasks:
+  - name: Install Dependencies & Start Dev Server
+    init: |
+      npm install
+      echo "✅ Dependencies installed!"
+    command: |
+      npm run dev
+      gp ports await 5173
+      echo "🚀 Development server started!"
+      echo "🌐 Preview URL: $(gp url 5173)"
+
+ports:
+  - port: 5173
+    onOpen: open-preview
+    visibility: public
+
+vscode:
+  extensions:
+    - bradlc.vscode-tailwindcss
+    - ms-vscode.vscode-typescript-next
+    - ms-vscode.vscode-eslint
+    - formulahendry.auto-rename-tag
+    - christian-kohler.path-intellisense
+
+github:
+  prebuilds:
+    master: true
+    branches: true
+    pullRequests: true
+    pullRequestsFromForks: true
+    addCheck: true
+    addComment: true
+    addBadge: true

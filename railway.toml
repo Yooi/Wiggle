@@ -1,0 +1,11 @@
+# Railway 部署配置
+[build]
+  builder = "NIXPACKS"
+
+[deploy]
+  startCommand = "npm run preview"
+  healthcheckPath = "/"
+  
+[variables]
+  NODE_VERSION = "18"
+  NPM_CONFIG_PRODUCTION = "false"
