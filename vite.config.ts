@@ -22,7 +22,7 @@ export default defineConfig(({ command, mode }) => ({
       },
     }),
   ],
-  base: mode === 'production' ? '/wiggle/' : '/',
+  base: mode === 'production' && process.env.GITHUB_PAGES ? '/Wiggle/' : '/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
