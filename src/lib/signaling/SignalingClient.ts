@@ -33,8 +33,13 @@ export class SignalingClient {
   private onExistingParticipantsHandler?: (participants: Participant[]) => void
   private onErrorHandler?: (error: string) => void
 
-  constructor(url: string = 'ws://localhost:3002') {
-    this.url = url
+  constructor(url?: string) {
+    // 支持环境变量配置
+    this.url = url || 
+      import.meta.env.VITE_SIGNALING_URL || 
+      (import.meta.env.DEV 
+        ? 'ws://localhost:3002' 
+        : `wss://${window.location.host}/api/ws`)
   }
 
   /**

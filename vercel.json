@@ -8,16 +8,32 @@
       "config": {
         "distDir": "dist"
       }
+    },
+    {
+      "src": "signaling-server/server.js",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
+    {
+      "src": "/api/ws",
+      "dest": "/signaling-server/server.js"
+    },
     {
       "src": "/(.*)",
       "dest": "/index.html"
     }
   ],
-  "buildCommand": "npm run build",
+  "functions": {
+    "signaling-server/server.js": {
+      "runtime": "@vercel/node@18"
+    }
+  },
+  "buildCommand": "npm run build:all",
   "devCommand": "npm run dev",
-  "installCommand": "npm install",
-  "framework": "vite"
+  "installCommand": "npm run install:all",
+  "framework": "vite",
+  "env": {
+    "NODE_ENV": "production"
+  }
 }

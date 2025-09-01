@@ -239,7 +239,8 @@ class SignalingServer {
 }
 
 // Start the server
-const server = new SignalingServer(process.env.PORT || 3002);
+const port = process.env.SIGNALING_PORT || process.env.PORT || 3002;
+const server = new SignalingServer(port);
 
 // Graceful shutdown
 process.on('SIGINT', () => {

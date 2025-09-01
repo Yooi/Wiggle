@@ -92,7 +92,7 @@ export default function Room() {
 
     const initSignaling = async () => {
       try {
-        const signalingClient = new SignalingClient('ws://localhost:3002')
+        const signalingClient = new SignalingClient()
         
         // Set up event handlers
         signalingClient.onConnected(() => {

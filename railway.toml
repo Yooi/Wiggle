@@ -3,9 +3,11 @@
   builder = "NIXPACKS"
 
 [deploy]
-  startCommand = "npm run preview"
+  startCommand = "npm run start:all"
   healthcheckPath = "/"
   
 [variables]
   NODE_VERSION = "18"
   NPM_CONFIG_PRODUCTION = "false"
+  PORT = "3000"
+  SIGNALING_PORT = "3002"
